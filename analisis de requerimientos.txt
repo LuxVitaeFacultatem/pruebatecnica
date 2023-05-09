@@ -1,0 +1,24 @@
+USUARIO / PASAJERO / RIDER
+solicitud de servicio de conductor
+
+	.Debe recibir la ubicacion del usuario con latitud y longitud
+	otros datos que requiera
+
+	.debe asignar un conductor cercano
+
+	.iniciar un viaje
+
+CONDUCTOR / DRIVER
+
+Finalizar viaje
+	.crear un ID del servicio para almacenarlo en la base de datos
+	.almacenar la ubicacion final del viaje
+	.crear transaccion usando la api de wompi y cargar el cobro al usuario.
+
+BD
+
+Tabla Rider
+
+Tabla Driver
+
+Tabla servicios
