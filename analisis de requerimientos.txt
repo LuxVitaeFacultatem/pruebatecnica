@@ -3,6 +3,8 @@ solicitud de servicio de conductor
 
 	.Debe recibir la ubicacion del usuario con latitud y longitud
 	otros datos que requiera
+	
+	.crear un ID del servicio para almacenarlo en la base de datos en la tabla de servicio
 
 	.debe asignar un conductor cercano
 
@@ -11,8 +13,9 @@ solicitud de servicio de conductor
 CONDUCTOR / DRIVER
 
 Finalizar viaje
-	.crear un ID del servicio para almacenarlo en la base de datos
+	recibir el id del servicio y la ubicacion final del viaje
 	.almacenar la ubicacion final del viaje
+	.realizar calculo de valor total bajo los estandares de precios descritos en el documento
 	.crear transaccion usando la api de wompi y cargar el cobro al usuario.
 
 BD
@@ -22,3 +25,7 @@ Tabla Rider
 Tabla Driver
 
 Tabla servicios
+
+tabla cobros wompi
+
+state = progress - complete
