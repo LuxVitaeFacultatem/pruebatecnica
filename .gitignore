@@ -1,5 +1,3 @@
 # Environments
 env/
-
-# Information Archives
-analisis de requerimientos.txt
+.env
