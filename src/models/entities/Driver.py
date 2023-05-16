@@ -1,9 +1,13 @@
 class Driver:
 
-    def __init__(self, id, first_name=None, last_name=None, mail=None, lat_long=None, creation_date=None) -> None:
+    def __init__(self, id, lat_long=None, status = None) -> None:
         self.id = id
-        self.first_name = first_name
-        self.last_name = last_name
-        self.mail = mail
         self.lat_long = lat_long
-        
+        self.status = status
+
+    def to_JSON(self):
+        return {
+            "id": self.id,
+            "lat_long": self.lat_long,
+            "status": self.status
+        }
