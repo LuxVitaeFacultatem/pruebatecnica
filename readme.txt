@@ -1,3 +1,6 @@
+Acknowledgments:
+Hello, first I would like to thank you for the opportunity to present this technical test, the recruiter told me that it would give extra points to have developed it in ruby, I did not have enough time between work and university and that I was in the hospital for having contracted "dengue". But if I could do it, if given the opportunity I can demonstrate that I have the ability and desire to contribute a lot to your company.
+
 1. Running the the code localy: 
 
 - create an environment in Python, you can make use of virtual environments. A virtual environment allows you to have isolated Python environments with their own installed packages, which can help you manage dependencies and avoid conflicts between different projects. Here's how you can create a Python environment using the venv module:
