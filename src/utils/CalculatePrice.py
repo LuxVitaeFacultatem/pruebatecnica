@@ -11,6 +11,7 @@ def to_cents(number):
     else:
         return int(number)
 
+#Calculations based on business logic as proposed in document
 
 class CalculatePrice:
     @classmethod

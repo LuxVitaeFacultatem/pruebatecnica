@@ -199,25 +199,60 @@ k) Test your API: Access the endpoints of your Flask REST API on the provided He
 That's it! Your Flask REST API should now be deployed on Heroku. You can continue to make changes to your app locally, commit them, and deploy updates to Heroku using the git push heroku master command.
 
 
+---------------------------------------------------------------------------------
 
+How to make requests to endpoints
 
+Endpoints do not require authorization, there are two endpoints. 1 "/api/rider" this endpoint is in charge of receiving the following json
+ {
+    "rider_id": 3
+}
+which is composed by the reference "rider_id" with the id of the rider that is requesting the service as the value.
 
+The endpoint will create the service by querying the database where the client location is located.
 
+find the nearest available driver based on rider location
 
+Driver status becomes occupied
 
+and returns the following json as a successful answer
 
+{
+    "assigned_driver": {
+        "id": 2,
+        "lat_long": "(3.4762900227962774,-76.52684105709457)"
+    },
+    "message": "Ride created successfully",
+    "ride_id": [
+        39
+    ]
+}
 
+2 "/api/driver" this endpoint is in charge of receiving the following json
 
+{
+    "ride_id": 39
+}
 
+which is composed of the reference "ride_id" with the id of the ride you want to terminate
 
+and returns the following json as a successful answer
 
+{
+    "message": "ride completed successfully",
+    "payment": "200 OK",
+    "ride": {
+        "arrive_lat_long": "(3.4762900227962774,-76.52684105709457)",
+        "creation_date": "2023-05-17 15:24:04",
+        "driver": 2,
+        "finish_date": "2023-05-17 15:24:23",
+        "id": 39,
+        "origin_lat_long": "(3.452781936137825,-76.54903383590728)",
+        "rider": 3,
+        "state": "complete",
+        "total_price": 708308
+    }
+}
 
-
-
-
-
-
-   
-
-
-
+confirming the value charged to the user, if the payment was successful or not and the final information of the closed service, changing the driver status to available again.
+the driver's location is taken assuming that it is updated in real time, to make the final fare calculation example.
