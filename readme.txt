@@ -100,60 +100,17 @@ d) Run the Flask application by executing the following command:  python app.py
 
 e) Flask will start the development server, and you should see some output indicating that the server is running. By default, the Flask development server runs on http://127.0.0.1:5000/.
 
-f) Open a web browser and visit http://127.0.0.1:5000/ to see your Flask application in action.
+f) Open a web browser and visit http://127.0.0.1:5000/ to see Flask application in action.
 
 ---------------------------------------------------------------------------------
 
 2. Run Flask tests using the unittest:
 
-a) Create a test file: Create a new Python file in your project directory, for example, test_flask_app.py, where you'll write your Flask tests.
-
-b) Import the necessary modules: At the beginning of your test file, import the required modules:
-
-   import unittest
-   from flask import Flask, jsonify
-   from your_application_file import app
-
-c) Define a test class: Create a subclass of unittest.TestCase and define your test methods within it:
-
-class FlaskAppTests(unittest.TestCase):
-    def setUp(self):
-        # Optional: Perform any setup tasks here before each test
-
-    def tearDown(self):
-        # Optional: Perform any teardown tasks here after each test
-
-    def test_route(self):
-        # Write your test logic here
-        # Make requests to the Flask app and assert the expected responses
-        pass
-
-    def test_another_route(self):
-        # Write another test here
-        pass
-
-
-d) Implement test methods: Inside each test method, you can use Flask's test client to make requests to your Flask application and assert the expected responses. Here's an example of testing a route that expects a JSON response:
-
-    def test_route(self):
-        with app.test_client() as client:
-            response = client.get('/your_route')
-            self.assertEqual(response.status_code, 200)
-            self.assertEqual(response.content_type, 'application/json')
-            # Add more assertions based on the expected response
-
-e) Run the tests: To run the tests, you can use the unittest module's test runner. You can do this by adding the following code at the end of your test file:
-
-if __name__ == '__main__':
-    unittest.main()
-
-
-f) Execute the tests: Open a command prompt or terminal window, navigate to your project directory, and run the test file using the Python interpreter:
+Execute the tests: Open a command prompt or terminal window, navigate to your project directory, and run the test file using the Python interpreter:
 
 python test_flask_app.py
 
 
-g) The tests will be executed, and you will see the test results in the console.
 
 ---------------------------------------------------------------------------------
 
